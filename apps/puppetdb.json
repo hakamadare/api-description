@@ -1,0 +1,263 @@
+{
+   "name" : "PuppetDB",
+   "authority" : "GITHUB:hakamadare",
+   "version" : "1.0",
+   "meta" : [
+       "documentation" : "http://docs.puppetlabs.com/puppetdb/1.3/api/index.html"
+   ],
+   "formats" : [
+      "json",
+   ],
+   "methods" : {
+      "commands" : {
+         "path" : "/commands",
+         "method" : "POST",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+             "payload"
+         ],
+         "optional_params" : [
+             "checksum"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "facts" : {
+         "path" : "/v2/facts",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "facts_name" : {
+         "path" : "/v2/facts/:name",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "name"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "facts_name_value" : {
+         "path" : "/v2/facts/:name/:value",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "name",
+            "value"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "resources" : {
+         "path" : "/v2/resources",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "resources_type" : {
+         "path" : "/v2/resources/:type",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "type"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "resources_type_title" : {
+         "path" : "/v2/resources/:type/:title",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "type",
+            "title"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      }
+      "nodes" : {
+         "path" : "/v2/nodes",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node" : {
+         "path" : "/v2/nodes/:node",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node_facts" : {
+         "path" : "/v2/nodes/:node/facts",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node_facts_name" : {
+         "path" : "/v2/nodes/:node/facts/:name",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node",
+            "name"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node_facts_name_value" : {
+         "path" : "/v2/nodes/:node/facts/:name/:value",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node",
+            "name",
+            "value"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node_resources" : {
+         "path" : "/v2/nodes/:node/resources",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node_resources_type" : {
+         "path" : "/v2/nodes/:node/resources/:type",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node",
+            "type"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "nodes_node_resources_type_title" : {
+         "path" : "/v2/nodes/:node/resources/:type/:title",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "query",
+            "node",
+            "type",
+            "title"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "fact_names" : {
+         "path" : "/fact-names",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "metrics" : {
+         "path" : "/metrics/mbeans",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+      "metrics_mbean" : {
+         "path" : "/metrics/mbean/:name",
+         "method" : "GET",
+         "expected_status" : [
+            "200"
+         ],
+         "required_params" : [
+            "name"
+         ],
+         "headers" : {
+             "Accept" : "application/json"
+         }
+      },
+   }
+}
